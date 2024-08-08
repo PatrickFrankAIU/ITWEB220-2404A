@@ -71,6 +71,10 @@ let itemTotal1 = price1 * quanity1;
 let itemTotal2 = price2 * quanity2;
 let itemTotal3 = price3 * quanity3;
 // Calculates the total cost for all items
-let totalCost = itemTotal1 + itemTotal2 + itemTotal3;
+let grandCost = itemTotal1 + itemTotal2 + itemTotal3;
 // Prints the total cost
-console.log("The total cost for all items is: $" + totalCost.toFixed(2));
+console.log("The total cost for all items is: $" + grandCost.toFixed(2));
+// Stretch Goal
+let saleTax = 5 / 100;
+let salesTaxTotal = grandCost.toFixed(2) * saleTax;
+console.log(`The sales tax for order is 5% so the total cost including sales tax is $${(grandCost + salesTaxTotal).toFixed(2)}. Have a great day!`);
