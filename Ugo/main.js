@@ -1,3 +1,3 @@
 let var1 = prompt ("please a sentence!");
-let converted = var1.toLocaleUpperCase();
-console.log(converted);
+let firstChar = var1[7];
+console.log("The first character of your string is:" + firstChar);
