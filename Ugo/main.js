@@ -1,7 +1,7 @@
-let principal = prompt ("Enter the principal amount:");
-let interestRate =prompt ("Enter the interest rate (for 5% enter 5):");
-let timeYears = prompt ("For how many years is the investment");
+let num1 = prompt("Enter the first number:");
+let num2 = prompt("Enter the second number:");
 
-let rate = interestRate / 100;
-let interest = principal * rate * timeYears;
-console.log("The simple interest will be : $" + interest.toFixed(2));
+
+let sum = num1 + num2;
+console.log ("The sum is : " + sum);
+
