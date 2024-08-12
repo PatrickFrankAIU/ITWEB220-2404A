@@ -10,11 +10,7 @@
             let quantity2 = parseInt(prompt("Enter the quantity of the second item:"));
             let quantity3 = parseInt(prompt("Enter the quantity of the third item:"));
 
-            
-            if (isNaN(price1) || isNaN(quantity1) || isNaN(price2) || isNaN(quantity2) || isNaN(price3) || isNaN(quantity3)) {
-                alert("Invalid input. Please enter valid numbers for prices and quantities.");
-                return; 
-            }
+          
 
             
             let totalCost1 = price1 * quantity1;
