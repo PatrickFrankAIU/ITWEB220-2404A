@@ -1,4 +1,6 @@
-let var1 = 10;
-let var2 = 20;
-let var3 = var1 * var2;
-console.log("Output: " + var3);
+let num1 = +prompt("Enter the first number:");
+let num2 = +prompt("Enter the second number:");
+
+let sum = num1 + num2;
+console.log("The sum is: " + sum);
+// here is a very important comment
