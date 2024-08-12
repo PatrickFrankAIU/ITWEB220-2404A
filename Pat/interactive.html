@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercises</title>
+</head>
+<body>
+    <div class="menu">
+        <button onclick="loadAndExecute('main.js')">Exercise 1</button>
+        <button onclick="loadAndExecute('exercise2.js')">Exercise 2</button>
+        <button onclick="loadAndExecute('exercise3.js')">Exercise 3</button>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <!-- This script tag will be dynamically updated -->
+    <script id="dynamic-script"></script>
+
+    <script>
+        function loadAndExecute(scriptPath) {
+            const scriptTag = document.getElementById('dynamic-script');
+
+            // Remove the old script tag if it exists
+            if (scriptTag.src) {
+                scriptTag.remove();
+            }
+
+            // Create a new script tag with the new src
+            const newScriptTag = document.createElement('script');
+            newScriptTag.src = scriptPath;
+
+            // Append the new script tag to the body to execute it
+            document.body.appendChild(newScriptTag);
+        }
+    </script>
+</body>
+</html>
