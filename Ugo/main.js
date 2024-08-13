@@ -1,23 +1,19 @@
-// Function to calculate the remainder
-function calculateRemainder() {
-    // Prompt user for the first number and convert it to a number type
-    let num1 = parseFloat(prompt("Enter the first number:"));
-    
-    // Prompt user for the second number and convert it to a number type
-    let num2 = parseFloat(prompt("Enter the second number:"));
+// Prompt the user to enter a string
+let userInput = prompt("Please enter a string:");
 
-    // Check if the second number is zero to prevent division by zero
-    if (num2 === 0) {
-        console.log("Division by zero is not allowed.");
-        return;
+// Check if the string has at least 5 characters
+if (userInput.length >= 5) {
+    // Loop through the first five characters and print each one
+    for (let i = 0; i < 5; i++) {
+        console.log(`${ordinal(i + 1)} Character: ${userInput.charAt(i)}`);
     }
-
-    // Calculate the remainder using the modulus operator
-    let remainder = num1 % num2;
-
-    // Display the result
-    console.log("The remainder of " + num1 + " divided by " + num2 + " is: " + remainder);
+} else {
+    console.log("The string is too short. Please enter at least 5 characters.");
 }
 
-// Call the function to execute
-calculateRemainder();
+// Helper function to get the ordinal representation of a number
+function ordinal(n) {
+    let suffix = ["th", "st", "nd", "rd"];
+    let value = n % 100;
+    return n + (suffix[(value - 20) % 10] || suffix[value] || suffix[0]);
+}
