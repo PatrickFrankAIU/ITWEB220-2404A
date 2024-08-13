@@ -1,25 +1,28 @@
 
-        function calculateCheckout() {
         
-            let price1 = parseFloat(prompt("Enter the price of the first item:"));
-            let price2 = parseFloat(prompt("Enter the price of the second item:"));
-            let price3 = parseFloat(prompt("Enter the price of the third item:"));
+            let price1 = prompt("Enter the price of the first item:");
+            let price2 = prompt("Enter the price of the second item:");
+            let price3 = prompt("Enter the price of the third item:");
+            let item1 = parseFloat(price1);
+            let item2 = parseFloat(price2);
+            let item3 = parseFloat(price3);
+            
+            let quantity1 = prompt("Enter the quantity of the first item:");
+            let quantity2 = prompt("Enter the quantity of the second item:");
+            let quantity3 = prompt("Enter the quantity of the third item:");
+
+            let qty1 = parseFloat (quantity1);
+            let qty2 = parseFloat (quantity2);
+            let qty3 = parseFloat (quantity3);
+
+
+
+          
 
             
-            let quantity1 = parseInt(prompt("Enter the quantity of the first item:"));
-            let quantity2 = parseInt(prompt("Enter the quantity of the second item:"));
-            let quantity3 = parseInt(prompt("Enter the quantity of the third item:"));
-
-            
-            if (isNaN(price1) || isNaN(quantity1) || isNaN(price2) || isNaN(quantity2) || isNaN(price3) || isNaN(quantity3)) {
-                alert("Invalid input. Please enter valid numbers for prices and quantities.");
-                return; 
-            }
-
-            
-            let totalCost1 = price1 * quantity1;
-            let totalCost2 = price2 * quantity2;
-            let totalCost3 = price3 * quantity3;
+            let totalCost1 = item1 * qty1;
+            let totalCost2 = item2 * qty2;
+            let totalCost3 = item3 * qty3;
 
     
             let grandTotal = totalCost1 + totalCost2 + totalCost3;
@@ -36,7 +39,7 @@
             alert(`Grand Total: $${grandTotal.toFixed(2)}`);
             alert(`Sales Tax Amount (5%): $${taxAmount.toFixed(2)}`);
             alert(`Total with Tax: $${totalWithTax.toFixed(2)}`);
-        }
+        
 
         
         calculateCheckout();
