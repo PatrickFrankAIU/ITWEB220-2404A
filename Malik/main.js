@@ -56,20 +56,20 @@ let firstItemPrice = prompt("Enter the price of the first item:");
 let secondItemPrice = prompt("Enter the price of the second item:");
 let thirdItemPrice = prompt("Enter the price of the third item:");
 // Prompts user to enter the quantity of three items
-let firstItemQuanity = prompt("Enter the quantity of the first item:");
-let secondItemQuanity = prompt("Enter the quantity of the second item:");
-let thirdItemQuanity = prompt("Enter the quantity of the third item:");
+let firstItemQuantity = prompt("Enter the quantity of the first item:");
+let secondItemQuantity = prompt("Enter the quantity of the second item:");
+let thirdItemQuantity = prompt("Enter the quantity of the third item:");
 //  Converts the prices and quantities to numbers
 let price1 = parseFloat(firstItemPrice);
 let price2 = parseFloat(secondItemPrice);
 let price3 = parseFloat(thirdItemPrice);
-let quanity1 = parseFloat(firstItemQuanity);
-let quanity2 = parseFloat(secondItemQuanity);
-let quanity3 = parseFloat(thirdItemQuanity);
+let quantity1 = parseFloat(firstItemQuantity);
+let quantity2 = parseFloat(secondItemQuantity);
+let quantity3 = parseFloat(thirdItemQuantity);
 // Calculates the total cost for the items
-let itemTotal1 = price1 * quanity1;
-let itemTotal2 = price2 * quanity2;
-let itemTotal3 = price3 * quanity3;
+let itemTotal1 = price1 * quantity1;
+let itemTotal2 = price2 * quantity2;
+let itemTotal3 = price3 * quantity3;
 // Calculates the total cost for all items
 let grandCost = itemTotal1 + itemTotal2 + itemTotal3;
 // Prints the total cost
@@ -78,3 +78,14 @@ console.log("The total cost for all items is: $" + grandCost.toFixed(2));
 let saleTax = 5 / 100;
 let salesTaxTotal = grandCost.toFixed(2) * saleTax;
 console.log(`The sales tax for order is 5% so the total cost including sales tax is $${(grandCost + salesTaxTotal).toFixed(2)}. Have a great day!`);
+
+// Exercise: Display a String by Individual Characters
+let userString = prompt("Please enter your name or a sentence:");
+console.log("First Character: " + userString.charAt(0));
+console.log("Second Character: " + userString.charAt(1));
+console.log("Third Character: " + userString.charAt(2));
+
+// Exercise: Modulus Calculator
+let value1 = +prompt("Enter the first number:");
+let value2 = +prompt("Enter the second number:");
+console.log("Modulus: " + value1 % value2);
