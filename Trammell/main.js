@@ -45,5 +45,11 @@
         // This is what's causing the error after the program completes. 
         // The line below would work if you were to take all of the above code
         // and place it in a function called "calculateCheckout()". -- Pat
-        calculateCheckout();
-    
+        
+
+
+        let age = prompt("What is your age in years?");
+
+        let usersAge = age * 365; 
+       console.log("you are approxiately " + usersAge + " 20days old");
+       console.log(`you are approxiately ${usersAge} days old`);
