@@ -1,5 +1,4 @@
 
-        function calculateCheckout() {
         
             let price1 = prompt("Enter the price of the first item:");
             let price2 = prompt("Enter the price of the second item:");
@@ -40,7 +39,7 @@
             alert(`Grand Total: $${grandTotal.toFixed(2)}`);
             alert(`Sales Tax Amount (5%): $${taxAmount.toFixed(2)}`);
             alert(`Total with Tax: $${totalWithTax.toFixed(2)}`);
-        }
+        
 
         
         calculateCheckout();
