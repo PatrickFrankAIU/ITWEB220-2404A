@@ -27,7 +27,7 @@ switch(currentDay) {
       break;
     
     case 7:
-      console.log("TGIF!!");
+      console.log("Time to relax, it's Saturday!");
       break;
    
     default:
