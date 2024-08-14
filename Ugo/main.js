@@ -1,19 +1,19 @@
-// Prompt the user to enter a string
-let userInput = prompt("Please enter a string:");
+// Prompt the user to enter a number
+let input = prompt("Please enter a number:");
 
-// Check if the string has at least 5 characters
-if (userInput.length >= 5) {
-    // Loop through the first five characters and print each one
-    for (let i = 0; i < 5; i++) {
-        console.log(`${ordinal(i + 1)} Character: ${userInput.charAt(i)}`);
-    }
+// Convert the input to a number
+let number = parseFloat(input);
+
+// Check if the conversion was successful
+if (isNaN(number)) {
+    console.log("The input is not a valid number.");
 } else {
-    console.log("The string is too short. Please enter at least 5 characters.");
-}
-
-// Helper function to get the ordinal representation of a number
-function ordinal(n) {
-    let suffix = ["th", "st", "nd", "rd"];
-    let value = n % 100;
-    return n + (suffix[(value - 20) % 10] || suffix[value] || suffix[0]);
+    // Classify the number
+    if (number > 0) {
+        console.log("The number is positive.");
+    } else if (number < 0) {
+        console.log("The number is negative.");
+    } else {
+        console.log("The number is zero.");
+    }
 }
