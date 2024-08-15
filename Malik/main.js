@@ -92,7 +92,7 @@ console.log("Third Character: " + userString.charAt(2));
 let value1 = +prompt("Enter the first number:");
 let value2 = +prompt("Enter the second number:");
 console.log("Modulus: " + value1 % value2);
-*/
+
 
 
 // Exercise: Positive and Negative Numbers #6
@@ -207,3 +207,124 @@ function adviseDriver(trafficLight, timeOfDay) {
 }
 
 adviseDriver(trafficLight, timeOfDay);
+*/
+
+// Exercise: Nested IFs #9
+let loyaltyPoints = prompt("Enter your loyalty points:");
+let purchaseAmount = prompt("Enter your purchase amount:");
+
+let loyaltyPointsNum = parseFloat(loyaltyPoints);
+let purchaseAmountNum = parseFloat(purchaseAmount);
+
+if (loyaltyPointsNum > 50) {
+    if (loyaltyPointsNum > 150 && purchaseAmountNum > 200) {
+        console.log('You qualify for a premium 25% discount');
+    } else if (loyaltyPointsNum > 100) {
+        console.log('You qualify for a standard 10% discount');
+    } else {
+        console.log('You qualify for a basic discount of 3%');
+    }
+} else {
+    console.log('You do not qualify for any discount');
+}
+
+
+
+// Challenge: Escape the Cave!
+let story = prompt('You have woken up in a dark cave with no memory of how you got here. You see two paths: one to the left and one to the right. Choose one path by typing "left" or "right".').toLowerCase();
+let foundTreasure = false;
+let foundSupplies = false;
+let foundMap = false;
+let foundHermit = false;
+
+if (story === 'left') {
+    let walkOrSwim = prompt('You have encountered a lake. Would you like to swim across or walk around it? Please type your answer ("swim" or "walk").').toLowerCase();
+    if (walkOrSwim === 'swim') {
+        alert('You found a hidden treasure in the middle of the lake.');
+        foundTreasure = true;
+    } else if (walkOrSwim === 'walk') {
+        alert('You found an abandoned campsite with useful supplies.');
+        foundSupplies = true;
+    }
+} else if (story === 'right') {
+    let exploreOrContinue = prompt('You have found a tunnel. Would you like to explore the tunnel or continue on the path? Please type your answer ("explore" or "continue").').toLowerCase();
+    if (exploreOrContinue === 'explore') {
+        alert('You have discovered a map of the cave.');
+        foundMap = true;
+    } else if (exploreOrContinue === 'continue') {
+        alert('You have encountered a friendly hermit who offers guidance.');
+        foundHermit = true;
+    }
+}
+
+if (foundTreasure) {
+    alert('You finally find the exit of the cave with a hidden treasure. Congratulations!');
+} else if (foundSupplies) {
+    alert('You finally find the exit of the cave with useful supplies. You are well-prepared for your journey ahead!');
+} else if (foundMap) {
+    alert('You finally find the exit of the cave with a map. You now have a better understanding of the cave\'s layout.');
+} else if (foundHermit) {
+    alert('You finally find the exit of the cave with guidance from the hermit. You feel more confident about your journey ahead.');
+} else {
+    alert('You finally find the exit of the cave. Although you didn\'t find any special items, you are relieved to be out.');
+}
+
+let summary = `Summary of Your Adventure: You chose to go ${story} and `;
+if (foundTreasure) {
+    summary += 'found a hidden treasure.';
+} else if (foundSupplies) {
+    summary += 'found useful supplies.';
+} else if (foundMap) {
+    summary += 'found a map of the cave.';
+} else if (foundHermit) {
+    summary += 'received guidance from a friendly hermit.';
+} else {
+    summary += 'did not find any special items.';
+}
+
+alert(summary);
+
+// Challenge: Find Your Spirit Animal!
+alert('Hello! Welcome to the Find Your Spirit Animal Quiz! Please answer the following questions to find your spirit animal.');
+
+let question1 = prompt('What is your preferred time of the day: Morning or Night?').toLowerCase();
+let morning1, coffee1, tea1, night1, stargazing1, nightwalks1;
+
+if (question1 === 'morning') {
+    morning1 = prompt('Do you prefer Coffee or Tea?').toLowerCase();
+    if (morning1 === 'coffee') {
+        coffee1 = prompt('Do you like Cappuccinos or Lattes?').toLowerCase();
+    } else if (morning1 === 'tea') {
+        tea1 = prompt('Do you enjoy Earl Grey or Black Tea?').toLowerCase();
+    }
+} else if (question1 === 'night') {
+    night1 = prompt('Do you enjoy Stargazing or Night Walks?').toLowerCase();
+    if (night1 === 'stargazing') {
+        stargazing1 = prompt('Do you prefer Orion or Ursa Major?').toLowerCase();
+    } else if (night1 === 'night walks') {
+        nightwalks1 = prompt('Do you enjoy the Grand Canyon or Mount Everest?').toLowerCase();
+    }
+} else {
+    alert('Invalid answer for question 1');
+}
+
+if (question1 === 'morning' && morning1 === 'coffee' && coffee1 === 'lattes') {
+    alert('Your spirit animal is a Llama!');
+} else if (question1 === 'morning' && morning1 === 'coffee' && coffee1 === 'cappuccinos') {
+    alert('Your spirit animal is a Panda Bear!');
+} else if (question1 === 'morning' && morning1 === 'tea' && tea1 === 'earl grey') {
+    alert('Your spirit animal is a Baby Panda!');
+} else if (question1 === 'morning' && morning1 === 'tea' && tea1 === 'black tea') {
+    alert('Your spirit animal is a Monkey!');
+} else if (question1 === 'night' && night1 === 'stargazing' && stargazing1 === 'orion') {
+    alert('Your spirit animal is a Squirrel!');
+} else if (question1 === 'night' && night1 === 'stargazing' && stargazing1 === 'ursa major') {
+    alert('Your spirit animal is a Bear!');
+} else if (question1 === 'night' && night1 === 'night walks' && nightwalks1 === 'grand canyon') {
+    alert('Your spirit animal is a Penguin!');
+} else if (question1 === 'night' && night1 === 'night walks' && nightwalks1 === 'mount everest') {
+    alert('Your spirit animal is a Hippopotamus!');
+} else {
+    alert('I\'m sorry, but I couldn\'t find a match for your spirit animal.');
+}
+
