@@ -1,45 +1,17 @@
-function adviseDriver(trafficLight, timeOfDay) {
-    switch (trafficLight) {      
-        case "green":        
-            console.log("Go");
-            break;
-        case "yellow":
-            console.log("Slow down");
-            break;
-        case "red":
-            console.log("Stop");
-            break;
-        case "blinking":
-            switch (timeOfDay) {
-                case "day":
-                    console.log("Proceed with caution");
-                    break;
-                case "night":
-                    console.log("Stop, then proceed with caution");
-                    break;
-                default:
-                    console.log("Invalid time of day");
-            }
-            break;
-        case "none":
-            switch (timeOfDay) {
-                case "day":
-                    console.log("Stop, then proceed when safe");
-                    break;
-                case "night":
-                    console.log("Use the light as a stop sign");
-                    break;
-                default:
-                    console.log("Invalid time of day");
-            }
-            break;
-        default:
-            console.log("Invalid traffic light status");
+function determineOffer(loyaltyPoints, purchaseAmount) {
+    if (loyaltyPoints <= 50) {
+        return 'No Offer'; // User does not qualify for any special offer
+    } else if (loyaltyPoints > 150 && purchaseAmount > 200) {
+        return 'Premium Offer'; // User qualifies for the premium offer
+    } else if (loyaltyPoints > 100) {
+        return 'Standard Offer'; // User qualifies for the standard offer
+    } else {
+        return 'No Offer'; // For cases where loyalty points > 50 but <= 100
     }
 }
 
-// Example usage:
-let trafficLight = "blinking"; // possible values: "red", "green", "yellow", "blinking", "none"
-let timeOfDay = "night"; // possible values: "day", "night"
-
-adviseDriver(trafficLight, timeOfDay);
+// Example usage
+console.log(determineOffer(160, 250)); // Output: Premium Offer
+console.log(determineOffer(120, 150)); // Output: Standard Offer
+console.log(determineOffer(70, 100));  // Output: No Offer
+console.log(determineOffer(45, 300));  // Output: No Offer
