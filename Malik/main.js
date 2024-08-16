@@ -207,7 +207,6 @@ function adviseDriver(trafficLight, timeOfDay) {
 }
 
 adviseDriver(trafficLight, timeOfDay);
-*/
 
 // Exercise: Nested IFs #9
 let loyaltyPoints = prompt("Enter your loyalty points:");
@@ -328,3 +327,162 @@ if (question1 === 'morning' && morning1 === 'coffee' && coffee1 === 'lattes') {
     alert('I\'m sorry, but I couldn\'t find a match for your spirit animal.');
 }
 
+
+
+
+// Challenge: JavaScript Quiz #12
+
+// Question 1
+let quizQuestion1 = prompt(`What is the correct syntax for creating a function in JavaScript? A. function myFunction(){} B. function myFunction = function(){}. Please choose either A or B.`).toUpperCase();
+if (quizQuestion1 === 'A') {
+    alert('Correct! Good job!');
+} else {
+    alert('Sorry, that is incorrect. The correct syntax is function myFunction(){}.');
+    alert('Thank you for participating in the quiz! I recommend practicing coding and learning new concepts to improve your skills.');
+    throw new Error('Quiz Ended');
+}
+
+// Question 2
+let quizQuestion2 = prompt(`What does the value NaN represent in JavaScript? A. A value that is not defined B. A value that is not a number. Please choose either A or B.`).toUpperCase();
+if (quizQuestion2 === 'B') {
+    alert('Correct! Good job!');
+} else {
+    alert('Sorry, that is incorrect. NaN stands for Not a Number.');
+    alert('Thank you for participating in the quiz! I recommend practicing coding and learning new concepts to improve your skills.');
+    throw new Error('Quiz Ended');
+}
+
+// Question 3
+let quizQuestion3 = prompt(`What does the === operator in JavaScript do? A. It checks if two values are equal. B. It checks if two values are equal and of the same type. Please choose either A or B.`).toUpperCase();
+if (quizQuestion3 === 'B') {
+    alert('Correct! Good job!');
+} else {
+    alert('Sorry, that is incorrect. The === operator in JavaScript checks if two values are equal and of the same type.');
+    alert('Thank you for participating in the quiz!');
+    throw new Error('Quiz Ended');
+}
+
+alert(`Congratulations on completing all the JavaScript quizzes! Regardless of your score, you should continuously practice coding and learning new concepts to improve your skills.`);
+
+
+*/
+// Exercise: Ternary Operator #13
+let number = 12;
+let number2 = 4;
+console.log(number % 2 === 0? 'Even' : 'Odd'); // #1
+
+console.log(number > number2 ? `${number} is greater than ${number2}` : `$ {number2} is greater than ${number}`); // #2
+
+let post = prompt('Please enter a number between 1 and 100.');
+ post =80
+let message = post > 0 ? `This number is positive` :
+    post < 0 ? `This number is negative` :
+    `This number is zero` ;
+console.log(message); // #3
+
+let grade= 80;
+let gradeA = grade>= 90 ? 'A' : grade >=80 ? 'B' : grade >=70 ? 'C': grade >=60 ? 'D' : 'F';
+console.log(gradeA); // #4
+let days = prompt(`Please enter a number between 1 and 7 representing a day of the week (1 is Monday)`)
+let dayOfWeek = days === '1' ? 'Monday' : days === '2' ? 'Tuesday' : days === '3' ? 'Wednesday' : days === '4' ? 'Thursday' : days === '5' ? 'Friday' : days === '6' ? 'Saturday' : days === '7' ? 'Sunday' : 'Invalid input';
+console.log(dayOfWeek); // #5
+
+
+//Exercise: Simple Counting Loop (But Backwards!) #14
+for(let i = 10; i >= 1; i--){
+    console.log(i);
+}
+
+let i =10
+while(i >=1){
+    console.log(i);
+    i--;
+}
+
+
+// Exercise: Repetitive Message #15
+let msg = 'Hello! This is Exercise: Repetitive Message #15';
+for(let i = 0; i < 4; i++){
+    console.log(msg);
+}
+
+// Exercise: Loop with a Simple Calculation #16
+let product = 1;
+for (let i = 26; i < 75; i++) {
+    product *= i;
+}
+console.log(product);
+
+// Exercise: Loop with More Complex Calculation (but still no IF!) #17
+let sumOfProducts = 0;
+
+for (let n = 1; n < 10; n++){
+    let product = n * (n + 1);
+    sumOfProducts += product;
+}
+console.log(sumOfProducts);
+
+// Exercise: Number Squared Less Than 50 (Requires an IF!) #18
+for(let i = 1; i <= 10; i++){
+    let square = i *i;
+    if(square < 50){
+        console.log(square);
+    }
+}
+// Exercise: Numbers in Multiples #19
+for(let i = 1; i <=50; i++){
+    if(i % 5 === 0){
+        console.log(i);
+    }
+}
+
+
+
+//Challenge: Fizzbuzz! #20 (Pretty Easy)
+for(let i = 1; i <= 50; i++){
+    if(i % 3 === 0 && i % 5 === 0){
+        console.log('FizzBuzz ' + i);
+    }else if(i % 3 ===0){
+        console.log('Fizz ' + i);
+    }else if(i % 5 === 0){
+        console.log('Buzz ' + i);
+    }
+}
+
+let b = 1;
+while (b <= 50) {
+    if (b % 3 === 0 && b % 5 === 0) {
+        console.log('FizzBuzz ' + b);
+    } else if (b % 3 === 0) {
+        console.log('Fizz ' + b);
+    } else if (b % 5 === 0) {
+        console.log('Buzz ' + b);
+    }
+    b++;
+}
+
+
+// Exercise: Small, Medium or Large! #21
+for(i = 1; i <=15; i++){
+    if(i < 6){
+        console.log(`${i} is Small`);
+    }else if(i < 10){
+        console.log(`${i} is Medium`);
+    }else if(i <= 15){
+        console.log(`${i} is Large`);
+    }
+}
+
+
+
+let e = 1;
+while(e <= 15){
+    if(e < 6){
+        console.log(`${e} is Small`);
+    }else if(e < 10){
+        console.log(`${e} is Medium`);
+    }else if(e <= 15){
+        console.log(`${e} is Large`);
+    }
+    e++;
+}
