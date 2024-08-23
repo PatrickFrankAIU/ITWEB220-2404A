@@ -365,7 +365,7 @@ if (quizQuestion3 === 'B') {
 alert(`Congratulations on completing all the JavaScript quizzes! Regardless of your score, you should continuously practice coding and learning new concepts to improve your skills.`);
 
 
-*/
+
 // Exercise: Ternary Operator #13
 let number = 12;
 let number2 = 4;
@@ -485,4 +485,131 @@ while(e <= 15){
         console.log(`${e} is Large`);
     }
     e++;
+}
+
+*/
+
+// Exercise: Array Manipulation and Display #23
+
+let numbers1 =[];
+let fiveNumbers = 5
+let sum = 0
+for(let i = 0; i < fiveNumbers; i++){
+    let number = +prompt(`Please enter the ${i+1} number`);
+    numbers1.push(number);
+    sum += number;
+}
+for (const number of numbers1) {
+    console.log(number);
+}
+console.log(`The sum of the numbers is ${sum}`);
+
+
+// Exercise: Array with Helpful Function #24
+let numbers2 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+console.log(findMinimum(numbers2)); // correct output should be 1
+
+function findMinimum(numbers){
+    numbers.sort((a,b) => a-b)
+    return numbers[0];
+}
+
+
+// Exercise: Sort an Array of Numbers #25
+let names = ["James", "Janice", "Andrew", "Andrea", "Zachary"];
+names.sort()
+for (const name of names) {
+    console.log(`Hello, my name is ${name}`);
+}
+
+// Exercise: Sort an Array of Numbers #26
+let numbers = [23, 5, 89, 16, 7];
+numbers.sort((a, b) => a - b)
+for (const number of numbers) {
+    console.log(`The number is ${number}`)
+}
+
+// Exercise: User Input and Arrays #27
+
+let numberOfValues = +prompt('How many values would you like ?')
+let arr =[]
+for(let i = 0; i < numberOfValues; i++){
+    let number= +prompt('What is the number for ' + (i + 1 ))
+    arr.push(number)
+}
+
+let i = 0
+while(i < numberOfValues){
+    let number= +prompt('What is the number for ' + (i + 1 ))
+    arr.push(number)
+    i++
+}
+
+arr.sort((a ,b) => a -b)
+for (const item of arr) {
+    console.log(item)
+}
+
+// Stretch Goal
+let numberOfNames = prompt('How many names would you like enter ?')
+let arr2 =[]
+for(let i = 0; i < numberOfNames; i++){
+    let names = prompt('What is the name for ' + (i + 1))
+    arr2.push(names)
+}
+
+arr2.sort()
+for (const name of arr2) {
+    console.log(`Hello mt name is ${name}`)
+}
+
+
+
+// Exercise: Arrays of Objects #28
+
+let employees = [
+    { name: 'Pat', office: 'Miami', extension: 1305 },
+    { name: 'Sandy', office: 'Miami', extension: 1302 },
+    { name: 'Andrea', office: 'Atlanta', extension: 1403 },
+];
+// #1
+for (const employee of employees) {
+    console.log(`Name: ${employee.name}, Office: ${employee.office}, Extension: ${employee.extension}`);
+}
+// #2
+function sortByExtension(employees) {
+    employees.sort((a, b) => a.extension - b.extension);
+    for (const employee of employees) {
+        console.log(`Name: ${employee.name}, Office: ${employee.office}, Extension: ${employee.extension}`);
+    }
+}
+sortByExtension(employees)
+// #3
+function sortByName(name){
+    employees.sort((a, b)=> a.name.localeCompare(b.name));
+    for (const employee of employees) {
+        console.log(`Name: ${employee.name}, Office: ${employee.office}, Extension: ${employee.extension}`);
+    }
+}
+sortByName(employees)
+
+// Stretch Goal
+function addNewEmployee() {
+    let name = prompt('Enter the name of the new employee:');
+    let office = prompt('Enter the office location of the new employee:');
+    let extension = prompt('Enter the extension number of the new employee:');
+
+    let newEmployee = {
+        name: name,
+        office: office,
+        extension: parseInt(extension)
+    };
+
+    employees.push(newEmployee);
+}
+
+addNewEmployee(employees);
+
+for (const employee of employees) {
+    console.log(`Name: ${employee.name}, Office: ${employee.office}, Extension: ${employee.extension}`);
 }
