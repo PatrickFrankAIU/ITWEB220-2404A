@@ -83,6 +83,7 @@ for (let i = 1; i<=15; i++){
 */
 // Sort an Array of Numbers
 
+/*
 let numbers = [23, 5, 89, 16, 7];
 numbers.sort((a, b) => a-b);
 let result = 'sorted numbers:';
@@ -96,3 +97,47 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(result);
+*/
+
+//User Input and Arrays
+
+/*
+let numValues = parseInt(prompt("How many numbers would you like to enter?"));
+
+
+let numbers = [];
+
+for (let i = 0; i < numValues; i++) {
+    let number = parseFloat(prompt(`Enter number ${i + 1}:`));
+    numbers.push(number);
+}
+
+numbers.sort((a, b) => a - b);
+
+let result = 'Sorted numbers: ';
+for (let number of numbers) {
+    result += number + ' ';
+}
+console.log(result.trim());
+
+*/
+/*
+let numValues = parseInt(prompt("How many strings would you like to enter?"));
+
+let strings = [];
+
+
+for (let i = 0; i < numValues; i++) {
+    let str = prompt(`Enter string ${i + 1}:`);
+    strings.push(str);
+}
+
+
+strings.sort();
+*/
+
+let result = 'Sorted strings: ';
+for (let str of strings) {
+    result += str + ' ';
+}
+console.log(result.trim());
