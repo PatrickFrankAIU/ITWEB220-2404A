@@ -39,6 +39,8 @@
             alert(`Grand Total: $${grandTotal.toFixed(2)}`);
             alert(`Sales Tax Amount (5%): $${taxAmount.toFixed(2)}`);
             alert(`Total with Tax: $${totalWithTax.toFixed(2)}`);
+
+            
         
 
         // Trammell, the line below is calling a function that doesn't exist
@@ -53,3 +55,6 @@
         let usersAge = age * 365; 
        console.log("you are approxiately " + usersAge + " 20days old");
        console.log(`you are approxiately ${usersAge} days old`);
+       
+       calculateCheckout();
+       
