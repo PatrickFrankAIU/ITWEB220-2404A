@@ -70,7 +70,7 @@ console.log("position" + (i+1) +":" + names[i]);
 }
 */
 // Small, Med, Large
-
+/*
 for (let i = 1; i<=15; i++){
     if (i >= 1 && i <= 5){
       console.log(i + "is Small ");
@@ -80,4 +80,19 @@ for (let i = 1; i<=15; i++){
       console.log(i + "is Large");
     }
   }
+*/
+// Sort an Array of Numbers
 
+let numbers = [23, 5, 89, 16, 7];
+numbers.sort((a, b) => a-b);
+let result = 'sorted numbers:';
+
+for (let i = 0; i < numbers.length; i++) {
+  result += numbers[i];
+
+  if (i < numbers.length - 1) {
+    result += ',';
+  }
+}
+
+console.log(result);
