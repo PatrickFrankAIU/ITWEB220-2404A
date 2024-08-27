@@ -56,7 +56,10 @@
        console.log("you are approxiately " + usersAge + " 20days old");
        console.log(`you are approxiately ${usersAge} days old`);
        
-      */ 
+      */
+       //const { resolveAppiumHome } = require("appium");
+
+ 
 
 
       // Array of Names
@@ -134,10 +137,49 @@ for (let i = 0; i < numValues; i++) {
 
 
 strings.sort();
-*/
+
 
 let result = 'Sorted strings: ';
 for (let str of strings) {
     result += str + ' ';
 }
 console.log(result.trim());
+*/
+
+//Arrays of Objects
+
+let employees = [
+  { name: 'John Doe', extension: 'x123' },
+  { name: 'Jane Smith', extension: 'x456' },
+  { name: 'Alice Johnson', extension: 'x789' },
+  { name: 'Bob Brown', extension: 'x012' }
+];
+
+function displayEmployees(array) {
+  let result = 'Current employees:\n';
+  for (let employee of array) {
+      result += `Name: ${employee.name}, Extension: ${employee.extension}\n`;
+  }
+  console.log(result);
+}
+
+function sortByExtension(array) {
+  return array.sort((a, b) => a.extension.localeCompare(b.extension));
+}
+
+function sortByName(array) {
+  return array.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+
+console.log("Original array:");
+displayEmployees(employees);
+
+employees = sortByExtension(employees);
+console.log("Sorted by extension:");
+displayEmployees(employees);
+
+
+employees = sortByName(employees);
+console.log("Sorted by name:");
+displayEmployees(employees);
