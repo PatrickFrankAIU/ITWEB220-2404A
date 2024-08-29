@@ -187,8 +187,19 @@ displayEmployees(employees);
 */
 // Number in multiples
 
+/*
 for (let number = 1; number <= 50; number ++){
   if (number % 5 === 0){
     console.log(number);
+  }
+}
+  */
+
+// Number squared less than 50
+
+for (let number =1; number <= 10; number++){
+  let square = number * number;
+  if (square < 50){
+    console.log(square);
   }
 }
