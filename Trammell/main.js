@@ -148,6 +148,7 @@ console.log(result.trim());
 
 //Arrays of Objects
 
+/*
 let employees = [
   { name: 'John Doe', extension: 'x123' },
   { name: 'Jane Smith', extension: 'x456' },
@@ -183,3 +184,11 @@ displayEmployees(employees);
 employees = sortByName(employees);
 console.log("Sorted by name:");
 displayEmployees(employees);
+*/
+// Number in multiples
+
+for (let number = 1; number <= 50; number ++){
+  if (number % 5 === 0){
+    console.log(number);
+  }
+}
